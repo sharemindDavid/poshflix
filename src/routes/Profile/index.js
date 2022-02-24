@@ -1,5 +1,7 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import ProfileItem from "./components/ProfileItem";
+import "./styles.scss";
 
 function Profile(props) {
     return (
@@ -7,10 +9,12 @@ function Profile(props) {
             <div>
                 <div>
                     <div className="pro-logo">
-                        <img
-                            src="https://fontmeme.com/permalink/201109/e52951d466a0db107caf4e426bd6430b.png"
-                            alt=""
-                        />
+                        <Link to="/">
+                            <img
+                                src="https://fontmeme.com/permalink/201109/e52951d466a0db107caf4e426bd6430b.png"
+                                alt=""
+                            />
+                        </Link>
                     </div>
                     <h2>Poshflix를 시청할 프로필을 선택하세요.</h2>
                     <ul>
@@ -20,9 +24,6 @@ function Profile(props) {
                     </ul>
                 </div>
             </div>
-            <article className="pwa">
-                <img src="images/pwa-back.png" alt="" />
-            </article>
         </div>
     );
 }

@@ -1,0 +1,49 @@
+$header-background: #010101;
+
+header {
+    width: 100%;
+    background-color: $header-background;
+    z-index: 92;
+    position: fixed;
+}
+
+nav {
+    .inner-nav {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    ul {
+        display: flex;
+        margin: auto 50px;
+
+        li {
+            list-style: none;
+            position: relative;
+            margin: auto 0;
+            display: block;
+            padding: 15px 15px;
+            background-color: #010101;
+            font-size: 15px;
+            font-family: MapoPeacefull, Arial, Helvetica, sans-serif;
+            color: #ffffff;
+
+            .header-link {
+                text-decoration: none;
+
+                &:hover {
+                    color: #ffffff91;
+                }
+            }
+
+            img {
+                height: 40px;
+            }
+        }
+    }
+}
+
+.nav-active {
+    color: #ffffff91;
+}

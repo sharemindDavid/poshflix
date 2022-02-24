@@ -8,6 +8,11 @@ module.exports = {
         // bundled compiled 파일
         path: path.join(__dirname, "/dist"), // __dirname : 현재 디렉토리, dist 폴더에 모든 컴파일된 하나의 번들파일을 넣을 예정
         filename: "index_bundle.js",
+        publicPath: "/",
+    },
+    devServer: {
+        historyApiFallback: true,
+        port: 9000,
     },
     module: {
         // loader를 module object에 넣을 예정
@@ -23,14 +28,24 @@ module.exports = {
                 },
             },
             {
-                test: /\.scss$/, // .js, .jsx로 끝나는 babel이 컴파일하게 할 모든 파일
-                exclude: /node_modules/, // node module 폴더는 babel 컴파일에서 제외
-                use: {
-                    loader: "sass-loader",
-                    options: {
-                        sourceMap: true,
-                    },
-                },
+                test: /\.scss$/,
+                use: [
+                    // Creates `style` nodes from JS strings ()
+                    "style-loader",
+                    // Translates CSS into CommonJS
+                    "css-loader",
+                    // Compiles Sass to CSS
+                    "sass-loader",
+                ],
+            },
+            {
+                test: /\.css$/,
+                use: [
+                    // Creates `style` nodes from JS strings ()
+                    "style-loader",
+                    // Translates CSS into CommonJS
+                    "css-loader",
+                ],
             },
         ],
     },
