@@ -1,6 +1,9 @@
-import React, { useRef, useState } from "react";
+import React, { useContext, useRef, useState } from "react";
+import { DiaryStateContext } from "..";
 
 function EditForm({ onCreate }) {
+    const formList = useContext(DiaryStateContext);
+
     const titleInput = useRef();
     const contentInput = useRef();
     const nameInput = useRef();
@@ -9,7 +12,8 @@ function EditForm({ onCreate }) {
         title: "",
         content: "",
         user: "",
-        genre: "",
+        genre: "movie",
+        doneStatus: "pending",
     });
 
     const [isCreate, setIsCreate] = useState(false);
@@ -35,12 +39,19 @@ function EditForm({ onCreate }) {
             nameInput.current.focus();
             return;
         }
-        onCreate(state.title, state.content, state.user, state.genre);
+        onCreate(
+            state.title,
+            state.content,
+            state.user,
+            state.genre,
+            state.doneStatus
+        );
         setState({
             title: "",
             content: "",
             user: "",
             genre: "",
+            doneStatus: "",
         });
     };
 
@@ -48,7 +59,7 @@ function EditForm({ onCreate }) {
         <div className="EditForm">
             <h3>영화 요청 게시판</h3>
             <p className="list-count" style={{ marginBottom: "20px" }}>
-                총 건수 :
+                총 건수 : {formList.length}
             </p>
             <div className="select text-right">
                 <button className="button button_requ" onClick={toggleForm}>

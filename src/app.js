@@ -35,7 +35,7 @@ function App() {
     ];
 
     return (
-        <BrowserRouter>
+        <BrowserRouter basename="/">
             <Header />
             <Routes>
                 <Route path="/" element={<Profile profileList={dummyList} />} />

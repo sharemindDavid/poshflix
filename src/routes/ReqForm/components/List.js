@@ -1,8 +1,9 @@
-import React from "react";
+import React, { useContext } from "react";
+import { DiaryStateContext } from "..";
 import Item from "./Item";
 
-function List({ formList }) {
-    console.log(formList);
+function List() {
+    const formList = useContext(DiaryStateContext);
     return (
         <div className="List">
             <table>
@@ -29,7 +30,9 @@ function List({ formList }) {
                     </tr>
                 </tfoot>
                 <tbody>
-                    <Item {...formList} />
+                    {formList.map((it) => (
+                        <Item key={it.id} {...it} />
+                    ))}
                 </tbody>
             </table>
         </div>

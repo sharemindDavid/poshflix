@@ -8,6 +8,7 @@
     "build": "webpack --mode production",
     "lint": "eslint src"
   },
+  "homepage": ".",
   "author": "david kim",
   "license": "ISC",
   "dependencies": {
@@ -23,6 +24,7 @@
     "@babel/preset-react": "^7.16.7",
     "babel-eslint": "^10.1.0",
     "babel-loader": "^8.2.3",
+    "copy-webpack-plugin": "^10.2.4",
     "css-loader": "^6.6.0",
     "eslint": "^8.2.0",
     "eslint-config-airbnb": "^19.0.4",
