@@ -40,7 +40,7 @@ function Header() {
                                         ? "nav-active header-link"
                                         : "header-link"
                                 }
-                                to="/"
+                                to="/movie"
                             >
                                 영화
                             </NavLink>

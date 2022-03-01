@@ -4,6 +4,7 @@ import Header from "./components/Header";
 import Profile from "./routes/Profile";
 import ReqForm from "./routes/ReqForm";
 import "./styles/main.scss";
+import Movie from "./routes/Movie";
 
 function App() {
     const dummyList = [
@@ -38,6 +39,7 @@ function App() {
         <BrowserRouter basename="/">
             <Header />
             <Routes>
+	    	<Route path="/movie" element={<Movie />} />
                 <Route path="/" element={<Profile profileList={dummyList} />} />
                 <Route
                     path="/profile"

@@ -63,7 +63,7 @@ function EditForm({ onCreate }) {
             </p>
             <div className="select text-right">
                 <button className="button button_requ" onClick={toggleForm}>
-                    영화 요청
+	    {isCreate ? "cancel" : "영화 요청"}
                 </button>
             </div>
 
