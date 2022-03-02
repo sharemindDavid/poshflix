@@ -1,18 +1,13 @@
 import React from "react";
+import Main from "../Main";
 import MovieItem from "./MovieItem";
-import Main from "./routes/Main";
 
-function Moive() {
-
-	return (
-		<Main>	
-		<div className="Movie">
-		{MovieItem}	
-		</div>
-		</Main>
-	
-	)
-
+function Movie() {
+    return (
+        <Main>
+            <div className="Movie">{MovieItem}</div>
+        </Main>
+    );
 }
 
 export default Movie;
