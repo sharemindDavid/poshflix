@@ -1,3 +1,9 @@
 import styled from "styled-components";
 
-const 
+export const List = styled.div`
+	background-color: transparent;
+`;
+
+export const Item = styled.div`
+	display: block;
+`;
