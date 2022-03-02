@@ -8,7 +8,7 @@ module.exports = {
         // bundled compiled 파일
         path: path.join(__dirname, "/dist"), // __dirname : 현재 디렉토리, dist 폴더에 모든 컴파일된 하나의 번들파일을 넣을 예정
         filename: "index_bundle.js",
-        publicPath: "/",
+        publicPath: "auto",
     },
     devServer: {
         historyApiFallback: true,
