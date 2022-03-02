@@ -1,5 +1,5 @@
 import React, { useCallback, useReducer, useRef, useState } from "react";
-import Main from "../Main";
+import Main from "../../components/Main";
 import EditForm from "./components/EditForm";
 import List from "./components/List";
 import "./form.scss";
